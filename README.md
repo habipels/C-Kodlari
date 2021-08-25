@@ -1,1 +1,5 @@
-"# django app " 
+Django==2.0
+django-ckeditor==5.4.0
+django-cleanup==2.1.0
+django-crispy-forms==1.7.2
+django-js-asset==1.0.0
