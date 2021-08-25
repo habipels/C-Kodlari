@@ -1,0 +1,31 @@
+{% load static %}
+
+<div class="col-md-9 col-12">
+    <div class="row">
+    {% for date in sliderdata %}
+    
+    
+    <div class="col-lg-4 col-md-6 col-12">
+        <div class="card urun-card">
+          <img src="{{ date.image.url }}" alt="Yazılım Uzmanlığı" style="width:100%">
+          <div class="card-content">
+                <h5>{{date.isim}}</h5>
+                <p>{{date.aciklama_kart1}}</p>
+                <p>{{date.aciklama_kart2}}</p>
+                <p>{{date.aciklama_kart3}}</p>
+                <p>{{date.aciklama_kart4}}</p>
+                <p>{{date.aciklama_kart5}}</p>
+          </div>
+          
+          <button>İncele</button>
+        </div>
+    </div>
+    {% endfor %}
+
+    
+    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ***** Features Item End ***** -->

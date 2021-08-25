@@ -1,0 +1,40 @@
+{% load static%}
+<!-- ***** Features Item Start ***** -->
+<section class="section" id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading" style="margin-top:120px;">
+                    <h2>SIKÇA SORULAN SORULAR</h2>
+                    <img src="{% static 'assets/images/line-dec.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+{% for data in sfaq %}
+        <div class="accordion" id="accordionExample">
+
+
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="heading{{ data.ordernumber }}">
+  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ data.ordernumber }}" aria-expanded="true" aria-controls="collapse{{ data.ordernumber }}">
+    {{ data.question }}
+  </button>
+</h2>
+<div id="collapse{{ data.ordernumber }}" class="accordion-collapse collapse " aria-labelledby="heading{{ data.ordernumber }}" data-bs-parent="#accordionExample">
+  <div class="accordion-body">
+    <p>{{ data.answer|safe }}</p>
+  </div>
+</div>
+</div>
+
+</div>      
+{% endfor %}        
+    </div>
+</section>
+<!-- ***** Features Item End ***** -->
+
+
+<!-- ***** Call to Action End ***** -->
+
+

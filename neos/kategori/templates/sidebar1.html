@@ -1,0 +1,42 @@
+{% load static %}
+
+
+    <!-- ***** Features Item Start ***** -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-heading" style="margin-top:120px;">
+                        <h2>TÜM CANLI EĞİTİMLER</h2>
+                        <img src="assets/images/line-dec.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-12">
+                    <div class="left-sidebar">
+                        <h2>Kategoriler</h2>
+                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a href="/kategori/{{data.id}}/{{data.link}}">{{data.isim}}</a></h4>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a href="/egitimler/" >Tüm Eğitimler</a></h4>
+                                </div>
+                            </div>
+                            {% for data in kategori %}
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"><a href="/kategori/{{data.id}}/{{data.link}}">{{data.isim}}</a></h4>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div><!--/category-products-->
+                    
+                    </div>
+                </div>
+
+               

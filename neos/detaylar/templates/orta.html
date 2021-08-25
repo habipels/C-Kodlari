@@ -1,0 +1,84 @@
+
+    <!-- ***** Features Item Start ***** -->
+    <section class="section" id="features" style="margin-top:200px;">
+        <div class="container">
+          <div class="row">
+            {% for date in sliderdata %}
+            <div class="col-md-6 col-12">
+              <img src="{{ date.image.url }}" style="width:100%;">
+            </div>
+            
+            
+            
+            <div class="col-md-6 col-12">
+              <h1>{{ date.isim }}</h1>
+              <p>
+              {{ date.urun_sag_metin|safe  }}
+              </p>
+            </div>
+            <a class="btn btn-success"  href="{{ date.odeme_linki }}" style="width: 100px; height: 40px; margin-left:50% ;" >KAYIT</a>
+            <div class="col-12">
+              
+              <div class="w3-container" style="margin-top: 50px;">
+                <div class="w3-row">
+                  <a href="javascript:void(0)" onclick="openCity(event, 'tab1');">
+                    <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding">AÇIKLAMA</div>
+                  </a>
+                  <a href="javascript:void(0)" onclick="openCity(event, 'tab2');">
+                    <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding">MÜFREDAT</div>
+                  </a>
+                  <a href="javascript:void(0)" onclick="openCity(event, 'tab3');">
+                    <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding">TARİH&ÜCRET</div>
+                  </a>
+                  <a href="javascript:void(0)" onclick="openCity(event, 'tab4');">
+                    <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding">SERTİFİKA</div>
+                  </a>
+                </div>
+
+                <div id="tab1" class="w3-container city">
+                  <h2>AÇIKLAMA</h2>
+                  <p>{{ date.urun_aciklama|safe  }}</p>
+                </div>
+
+                <div id="tab2" class="w3-container city" style="display:none">
+                  <h2>MÜFREDAT</h2>
+                  <p>{{ date.urun_mufredat|safe  }}</p> 
+                </div>
+
+                <div id="tab3" class="w3-container city" style="display:none">
+                  <h2>TARİH&ÜCRET</h2>
+                  <p>{{ date.urun_tarih_ucret|safe  }}</p>
+                </div>
+
+                <div id="tab4" class="w3-container city" style="display:none">
+                  <h2>SERTİFİKA</h2>
+                  <p>{{ date.urun_sertifikalar|safe  }}</p>
+                </div>
+
+              </div>
+            
+              <script>
+              function openCity(evt, cityName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("city");
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" w3-border-blue", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-border-blue";
+              }
+              </script>
+
+            </div>
+            {% endfor %}
+          </div>
+            
+        </div>
+    </section>
+    <!-- ***** Features Item End ***** -->
+
+  

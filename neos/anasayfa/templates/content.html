@@ -1,0 +1,116 @@
+{% load static %}
+<!-- ***** Features Item Start ***** -->
+<section class="section" id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>YAKLAŞAN <em>CANLI</em> EĞİTİMLER</h2>
+                    <img src="{% static 'assets/images/line-dec.png' %}" alt="">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for date in sliderdata %}
+            
+            
+            <div class="col-md-4 col-12">
+                <div class="card urun-card">
+                  <img src= "{{ date.image.url }}"  alt="{{date.isim}}" style="width:100%">
+                  <div class="card-content">
+                      <h5>{{date.isim}}</h5>
+                      <p>{{date.aciklama_kart1}}</p>
+                      <p>{{date.aciklama_kart2}}</p>
+                      <p>{{date.aciklama_kart3}}</p>
+                      <p>{{date.aciklama_kart4}}</p>
+                      <p>{{date.aciklama_kart5}}</p>
+                  </div>
+                  
+                  <a href="/detay/{{date.id}}/{{date.link}}"><button>İncele</button></a>
+                </div>
+            </div>
+            {% endfor %}
+            
+   
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2><em>CANLI</em> EĞİTİMLERİN İŞLENİŞİ</h2>
+                    <img src="{% static 'assets/images/line-dec.png' %}" alt="waves">
+                    <p>Neos Yazılım Akademi'de kayıt olacağınız tüm eğitimler canlı olarak gerçekleşmektedir. Eğitimlerimiz yalnızca yazılım öğretmeyi değil, aynı zamanda meslek kazandırmayı hedefleyer. Eğitim programları alanında uzman Yazılım ve Bilgisayar Mühendislerince hazırlanmıştır. Eğitimlerimizden elde edeceğiniz kazanımların bazıları aşağıda mevcuttur.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <ul class="features-items">
+                    <li class="feature-item">
+                        <div class="left-icon">
+                            <img src="{% static 'assets/images/ikon1.png' %}" alt="First One" class="ikon">
+                        </div>
+                        <div class="right-content">
+                            <h4>1.Kayıt ve sonrası</h4>
+                            <p>Eğitim danışmanlarımızla birlikte size uygun olan eğitime karar verdiğiniz zaman kayıt işlemini tamamlarsınız. Ardından sizinle canlı eğitime katılım linki iletilir ve sınıf materyallerine erişim verilir.</p>
+                            <a href="tel:+905392117531" class="text-button">Danışmanla görüş</a>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="left-icon">
+                            <img src="{% static 'assets/images/ikon2.png' %}" alt="second one" class="ikon">
+                        </div>
+                        <div class="right-content">
+                            <h4>2.Mentor</h4>
+                            <p>Kayıt olduğunuz eğitim özelinde size özel mentor ataması yapılır. Mentorunuz bazen sınıfın eğitmeni, bazen de eğitmenin asistanı olabilir</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="left-icon" >
+                            <img src="{% static 'assets/images/ikon3.png' %}" alt="third gym training" class="ikon">
+                        </div>
+                        <div class="right-content">
+                            <h4>3.Quiz ve Ara Sınavlar</h4>
+                            <p>Öğrenim sürecinizde sürekli olarak sınav uygulaması yapılır. Sonuçlarınız eğitmen ve mentorunuz tarafından kontrol edilip, -eğer varsa- eksiklerinizi gidermeniz için yeni ödevler verilir</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <ul class="features-items">
+                    <li class="feature-item">
+                        <div class="left-icon">
+                            <img src="{% static 'assets/images/ikon4.png' %}" alt="fourth muscle" class="ikon">
+                        </div>
+                        <div class="right-content">
+                            <h4>4.Proje</h4>
+                            <p>Eğitimde edinilen bilgiler daima projelerle pekiştirilmektedir. Projelerinizi takım veya bireysel olarak hazırlayıp eğitmene sunmakta, eğitmenden revizyon alarak geliştirmelere devam etmektesiniz. Projeler iyi bir özgeçmiş için olmazsa olmazlardandır!</p>
+                           
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="left-icon">
+                            <img src="{% static 'assets/images/ikon5.png' %}" alt="training fifth" class="ikon">
+                        </div>
+                        <div class="right-content">
+                            <h4>5.Sektör Simülasyonu</h4>
+                            <p>Yeterli seviyeye geldiğinizde kariyer danışmanlığı ve sektör simülasyonuna alınırsınız. Bu süreçte öncelikle özgeçmiş hazırlamayı, daha sonra mülakat simülasyonlarını deneyimlersiniz. Bu sayede mülakat heyecanından uzak ve tekniklere hakim olursunuz.</p>
+                           
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="left-icon">
+                            <img src="{% static 'assets/images/ikon6.png' %}" alt="gym training" class="ikon">
+                        </div>
+                        <div class="right-content">
+                            <h4>6.Staj ve Sertifika</h4>
+                            <p>Sektör simülasyonuna ek olarak online staj sürecine alınırsınız. Bu süreçte sektörü tam anlamıyla deneyimleme imkanınız vardır. Süreci başarıyla tamamlayan katılımcılar ICCW Uluslararası sertifikası, Gedik Üniversitesi Sertifikası (e-devlet onaylı) ve Neos Akademi Sertifikası almaya hak kazanırlar</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Features Item End ***** -->
+
+
